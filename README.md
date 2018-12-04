@@ -1,19 +1,18 @@
 # bts-ws-client
 
-build:
+## build:
 
 gcc -g -O2 -o bts-wscli bts-wscli.c sha1.c base64.c
 
 gcc -g -O2 -o bts-wscli-ssl bts-wscli-ssl.c sha1.c base64.c -lssl
 
 
+## run
 ./bts-wscli-ssl wss://bit.btsabc.org/ws
 
 
 request[1]: {"id":1,"method":"call","params":[1,"login",["",""]]}
-
 return: (len=38): {"id":1,"jsonrpc":"2.0","result":true}
-
 
 
 request[2]: {"id":2,"method":"call","params":[1,"database",[]]}
